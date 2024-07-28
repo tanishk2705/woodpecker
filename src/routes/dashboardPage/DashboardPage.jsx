@@ -1,4 +1,5 @@
 // import { useMutation, useQueryClient } from "@tanstack/react-query";
+import NewPrompt from "../../components/newPrompt/NewPrompt";
 import "./dashboardPage.css";
 import { useNavigate } from "react-router-dom";
 
@@ -54,16 +55,20 @@ const DashboardPage = () => {
           </div>
         </div>
       </div>
-      <div className="formContainer">
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="text" placeholder="Ask me anything..." />
-          <button>
-            <img src="/arrow.png" alt="" />
-          </button>
-        </form>
+      <div className="newPromptContainer">
+      <NewPrompt />
       </div>
     </div>
   );
 };
 
 export default DashboardPage;
+
+
+
+ /* <form onSubmit={handleSubmit}>
+          <input type="text" name="text" placeholder="Ask me anything..." />
+          <button>
+            <img src="/arrow.png" alt="" />
+          </button>
+        </form> */

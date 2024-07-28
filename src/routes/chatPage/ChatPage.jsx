@@ -1,3 +1,4 @@
+import NewPrompt from "../../components/newPrompt/NewPrompt";
 import "./chatPage.css";
 // import NewPrompt from "../../components/newPrompt/NewPrompt";
 // import { useQuery } from "@tanstack/react-query";
@@ -5,9 +6,31 @@ import { useLocation } from "react-router-dom";
 // import Markdown from "react-markdown";
 // import { IKImage } from "imagekitio-react";
 
+
+
+
 const ChatPage = () => {
   const path = useLocation().pathname;
   const chatId = path.split("/").pop();
+
+ return (
+    <div className="chatPage">
+      <div className="wrapper">
+        <div className="chat">
+             {/* <NewPrompt/> */}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ChatPage;
+
+
+
+// const ChatPage = () => {
+//   const path = useLocation().pathname;
+//   const chatId = path.split("/").pop();
 
   /* const { isPending, error, data } = useQuery({
     queryKey: ["chat", chatId],
@@ -19,10 +42,10 @@ const ChatPage = () => {
 
   // console.log(data);
 
-  return (
-    <div className="chatPage">
-      <div className="wrapper">
-        <div className="chat">
+  // return (
+  //   <div className="chatPage">
+  //     <div className="wrapper">
+  //       <div className="chat">
           {/* {isPending
             ? "Loading..."
             : error
@@ -52,10 +75,10 @@ const ChatPage = () => {
               ))}
 
           {data && <NewPrompt data={data}/>} */}
-        </div>
-      </div>
-    </div>
-  );
-};
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
-export default ChatPage;
+// export default ChatPage;
