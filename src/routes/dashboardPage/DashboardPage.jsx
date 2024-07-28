@@ -66,9 +66,4 @@ export default DashboardPage;
 
 
 
- /* <form onSubmit={handleSubmit}>
-          <input type="text" name="text" placeholder="Ask me anything..." />
-          <button>
-            <img src="/arrow.png" alt="" />
-          </button>
-        </form> */
+
